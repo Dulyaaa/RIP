@@ -1,11 +1,9 @@
 
 (function() {
 
-    /* ====================
-    Preloader
-    ======================= */
+    //===== Preloader
 	window.onload = function () {
-		window.setTimeout(fadeout, 300);
+		window.setTimeout(fadeout, 500);
 	}
 
 	function fadeout() {
@@ -13,9 +11,12 @@
 		document.querySelector('.preloader').style.display = 'none';
 	}
 
-    // =========== sticky menu 
+
+    /*=====================================
+    Sticky
+    ======================================= */
     window.onscroll = function () {
-        var header_navbar = document.querySelector(".hero-section-wrapper-5 .header");
+        var header_navbar = document.querySelector(".navbar-area");
         var sticky = header_navbar.offsetTop;
 
         if (window.pageYOffset > sticky) {
@@ -33,20 +34,21 @@
         }
     };
 
-      // header-6  toggler-icon
-      let navbarToggler6 = document.querySelector(".header-6 .navbar-toggler");
-      var navbarCollapse6 = document.querySelector(".header-6 .navbar-collapse");
+    // Get the navbar
 
-      document.querySelectorAll(".header-6 .page-scroll").forEach(e =>
-          e.addEventListener("click", () => {
-              navbarToggler6.classList.remove("active");
-              navbarCollapse6.classList.remove('show')
-          })
-      );
-      navbarToggler6.addEventListener('click', function() {
-          navbarToggler6.classList.toggle("active");
-      })
 
+    // for menu scroll 
+    var pageLink = document.querySelectorAll('.page-scroll');
+    
+    pageLink.forEach(elem => {
+        elem.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(elem.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+                offsetTop: 1 - 60,
+            });
+        });
+    });
 
     // section menu active
 	function onScroll(event) {
@@ -67,36 +69,23 @@
 		}
 	};
 
-    window.document.addEventListener('scroll', onScroll);
-    
+	window.document.addEventListener('scroll', onScroll);
 
-    // ===== pricing-style-4 slider
-    tns({
-        container: '.pricing-active',
-        autoplay: false,
-        mouseDrag: true,
-        gutter: 0,
-        nav: false,
-        controls: true,
-        controlsText: [
-          '<i class="lni lni-chevron-left prev"></i>',
-          '<i class="lni lni-chevron-right prev"></i>',
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-          992: {
-            items: 1.2,
-          },
-          1200: {
-            items: 2,
-          }
-        }
-      });
+
+    //===== close navbar-collapse when a  clicked
+    let navbarToggler = document.querySelector(".navbar-toggler");    
+    var navbarCollapse = document.querySelector(".navbar-collapse");
+
+    document.querySelectorAll(".page-scroll").forEach(e =>
+        e.addEventListener("click", () => {
+            navbarToggler.classList.remove("active");
+            navbarCollapse.classList.remove('show')
+        })
+    );
+    navbarToggler.addEventListener('click', function() {
+        navbarToggler.classList.toggle("active");
+    }) 
+
 
 	// WOW active
     new WOW().init();
