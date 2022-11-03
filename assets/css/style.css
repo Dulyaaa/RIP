@@ -44,7 +44,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #1acc8d;
+  border: 6px solid #078183;
   border-top-color: #d2f9eb;
   border-radius: 50%;
   width: 60px;
@@ -948,6 +948,7 @@ section {
   background: #f5f5ff;
   padding: 70px 0 60px;
 }
+
 .timeline {
   position: relative;
   width: 100%;
@@ -1061,25 +1062,26 @@ section {
 
 .time .content {
   padding: 30px 90px 30px 30px;
-  background: #05a354;
+  background: #09a4a796;
   position: relative;
-  border-radius: 0 500px 500px 0;
+  border-radius: 200px 500px 500px 200px;
 }
 
 .time.right .content {
   padding: 30px 30px 30px 90px;
-  border-radius: 500px 0 0 500px;
+  border-radius: 500px 200px 200px 500px;
 }
 
 .time .content h2 {
   margin: 0 0 10px 0;
   font-size: 18px;
-  font-weight: normal;
-  color: #006E51;
+  font-weight: bolder;
+  color: #ffffff;
 }
 
 .time .content p {
   margin: 0;
+  text-align: justify;
   font-size: 16px;
   line-height: 22px;
   color: #000000;
@@ -1436,8 +1438,9 @@ section {
   padding: 20px 15px;
   font-size: 16px;
   font-weight: 600;
-  color: #777777;
-  background: #f8f8f8;
+  color: #454545;
+  text-align: left;
+  /* background: #f8f8f8; */
 }
 
 .pricing h4 {
@@ -1470,6 +1473,7 @@ section {
 }
 
 .pricing ul li {
+  text-align: left;
   padding-bottom: 16px;
 }
 
@@ -1492,7 +1496,7 @@ section {
 }
 
 .pricing .btn-buy {
-  background: #1acc8d;
+  background: #057b6d;
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 50px;
