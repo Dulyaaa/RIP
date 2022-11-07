@@ -1133,14 +1133,14 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Counts
+# Downloads
 --------------------------------------------------------------*/
-.counts {
+.downloads {
   background: #f5f5ff;
   padding: 70px 0 60px;
 }
 
-.counts .count-box {
+.downloads .count-box {
   padding: 30px 30px 25px 30px;
   width: 100%;
   position: relative;
@@ -1148,7 +1148,7 @@ section {
   background: #fff;
 }
 
-.counts .count-box i {
+.downloads .count-box i {
   position: absolute;
   top: -25px;
   left: 50%;
@@ -1166,18 +1166,38 @@ section {
   height: 48px;
 }
 
-.counts .count-box span {
+.downloads .count-box span {
   font-size: 36px;
   display: block;
   font-weight: 600;
   color: #010483;
 }
 
-.counts .count-box p {
+.downloads .count-box p {
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+}
+
+.downloads a {
+  font-weight: 600;
+  color: rgb(3, 116, 92);
+  text-decoration: none;
+}
+
+.downloads a:hover {
+  color: #0a3288;
+  text-decoration: underline;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 15px;
+  margin-bottom: 30px;
 }
 
 /*--------------------------------------------------------------
